@@ -107,4 +107,6 @@ def app():
     - **Product Demand Forecast**: Helps anticipate demand for key products, improving supply planning.
     - **Peak Time Projections**: Identifies high-demand days, useful for resource allocation and promotional planning.
     """)
-
+    st.markdown("""
+        Developed with ❤️ by **Afif Hossain Irfan**
+        """)

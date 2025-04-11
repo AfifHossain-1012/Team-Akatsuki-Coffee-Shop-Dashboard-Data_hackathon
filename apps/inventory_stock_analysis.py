@@ -116,3 +116,6 @@ def app():
     st.write(f"**Peak Demand Month**: {peak_month} (Plan for higher inventory requirements during this period)")
     st.write(f"The **average turnover rate** for {selected_category} is {inventory_turnover_rate:.2f} units per transaction, indicating the frequency at which inventory is cycled.")
 
+    st.markdown("""
+        Developed with ❤️ by **Afif Hossain Irfan**
+        """)

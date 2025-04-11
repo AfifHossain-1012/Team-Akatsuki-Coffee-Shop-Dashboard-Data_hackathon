@@ -111,3 +111,6 @@ def app():
         color_continuous_scale='Viridis'
     )
     st.plotly_chart(fig, use_container_width=True)
+    st.markdown("""
+        Developed with ❤️ by **Afif Hossain Irfan**
+        """)

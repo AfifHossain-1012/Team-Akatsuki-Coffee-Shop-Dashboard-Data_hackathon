@@ -58,3 +58,6 @@ def app():
     st.write(f"""
     - **Customer purchase patterns** provide insights into top products by spend level, useful for targeted recommendations.
     """)
+    st.markdown("""
+        Developed with ❤️ by **Afif Hossain Irfan**
+        """)

@@ -48,3 +48,6 @@ def app():
     - **Top 10 popular products in transactions** highlight frequently bought items, which can inform promotional strategies.
     - **Monthly transaction trends** reveal seasonal trends or peak periods in transaction frequency, which can guide inventory and marketing efforts.
     """)
+    st.markdown("""
+        Developed with ❤️ by **Afif Hossain Irfan**
+        """)

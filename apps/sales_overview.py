@@ -161,3 +161,6 @@ def app():
             labels={"x": "Day of the Week", "y": "Average Sales ($)"}
         )
         st.plotly_chart(fig, use_container_width=True)
+    st.markdown("""
+    Developed with ❤️ by **Afif Hossain Irfan**
+    """)

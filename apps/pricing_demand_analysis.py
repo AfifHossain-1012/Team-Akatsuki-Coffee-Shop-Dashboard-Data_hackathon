@@ -101,3 +101,6 @@ def app():
     - **Optimal pricing points** highlight where demand peaks, which helps identify ideal price settings.
     - **Price sensitivity** analysis of similar products aids in competitive pricing within the category.
     """)
+    st.markdown("""
+        Developed with ❤️ by **Afif Hossain Irfan**
+        """)

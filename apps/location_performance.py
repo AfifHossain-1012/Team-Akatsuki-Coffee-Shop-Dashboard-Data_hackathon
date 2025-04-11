@@ -106,3 +106,6 @@ def app():
                  title="Bottom 5 Low-Performing Stores by Total Sales",
                  color=bottom_5_stores.values, color_continuous_scale='Reds')
     st.plotly_chart(fig, use_container_width=True)
+    st.markdown("""
+        Developed with ❤️ by **Afif Hossain Irfan**
+        """)

@@ -3,11 +3,10 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 
-
 def app():
-    st.title("Coffee Shop Sales Dashboard")
+    st.title("Coffee Shop Sales Dashboard by Afif Hossain Irfan")
     st.write(
-        "Welcome to the Coffee Shop Sales Dashboard! Get insights into sales trends, product performance, and customer behaviors across all store locations.")
+        "Welcome to the Coffee Shop Sales Dashboard! This interactive data visualization tool was developed solely by **Afif Hossain Irfan** to provide insights into sales trends, product performance, and customer behaviors across all store locations.")
 
     # Load the dataset
     data = pd.read_csv("Cleaned_Coffee_Shop_Sales.csv")
@@ -45,8 +44,7 @@ def app():
     st.write(f"## Monthly Sales Trend for {selected_category}")
     monthly_sales = filtered_data.groupby(filtered_data['transaction_date'].dt.to_period("M")).agg(
         {"total_sales": "sum"}).reset_index()
-    monthly_sales['transaction_date'] = monthly_sales[
-        'transaction_date'].dt.to_timestamp()  # Convert period to timestamp for plotting
+    monthly_sales['transaction_date'] = monthly_sales['transaction_date'].dt.to_timestamp()
 
     fig = px.line(monthly_sales, x='transaction_date', y='total_sales',
                   labels={"transaction_date": "Month", "total_sales": "Total Sales ($)"},
@@ -58,7 +56,6 @@ def app():
     col3, col4 = st.columns(2)
 
     with col3:
-        # Sales Distribution by Product Detail
         st.write(f"### Sales Distribution by Product Detail in {selected_category}")
         product_sales = filtered_data.groupby('product_detail')['total_sales'].sum().reset_index()
         fig = px.bar(product_sales, x='total_sales', y='product_detail',
@@ -68,7 +65,6 @@ def app():
         st.plotly_chart(fig, use_container_width=True)
 
     with col4:
-        # Peak Sales Hours for selected category
         st.write(f"### Peak Sales Hours in {selected_category}")
         filtered_data['transaction_hour'] = pd.to_datetime(filtered_data['transaction_time'], format='%H:%M:%S').dt.hour
         hourly_sales = filtered_data.groupby('transaction_hour')['total_sales'].sum().reset_index()
@@ -99,5 +95,7 @@ def app():
     - **[Product Analysis](#)**: Analyze the performance of individual products and categories.
     - **[Customer Behavior](#)**: Get insights into customer purchase patterns.
     - **[Location Performance](#)**: Compare the performance of different store locations.
-    """)
 
+    ---
+    Developed with ❤️ by **Afif Hossain Irfan**
+    """)
